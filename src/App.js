@@ -40,7 +40,7 @@ class App extends Component {
     }
     var word_scale = d3.scaleBand(wordsBySize,[0, data.length / 5])
     var font_scale = d3.scaleLinear([0,d3.max(wordFrequency)], [10,60])
-    var container = d3.select(".svg_parent").attr("width", "100%").attr("padding", "5px")
+    var container = d3.select(".svg_parent").attr("width", "1000px").attr("padding", "5px")
 
     container.selectAll("text").data(data, function(d) {return d[0];}).join(
       enter => enter.append("text")
